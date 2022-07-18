@@ -7,6 +7,11 @@
     <title>Document</title>
   </head>
   <style>
+    body{
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
         #logo {
 width: 267.23px;
     }
@@ -89,6 +94,36 @@ li a:hover:not(.active) {
 p{
   margin: 2px;
 }
+.bottom-footer {
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.bottom-footer i {
+    color: #000000;
+}
+
+.bottom-footer a {
+    margin: 0 5px 0 5px;
+    color: #000000;
+}
+
+.heart {
+    color: rgb(255, 0, 0);
+
+}
+
+.bottom-footer a:visited {
+    color: #00000000;
+}
+
+.footer-link a:hover {
+    color: #0C92BF;
+}
+
+
   </style>
   <body>
     <div id="container">
@@ -108,7 +143,13 @@ p{
   </div>
 
 </div>
-
+<div class="bottom-footer">
+  <span class=footer-link><a href="https://fontawesome.com/">Fontawesome 6.1.1 </a></span>
+  <a><i class="fa-solid fa-ellipsis-vertical"></i></i></a>
+  <span class=footer-link><a href="https://github.com/BasharAlzrigat">Follow Me on Github</a></span>
+  <a><i class="fa-solid fa-ellipsis-vertical"></i></a>
+  <a>made with love<span class="heart"> ♥</span></a>
+</div>
     <script src="app.js"></script>
     <script src="statistics.js"></script>
   </body>
