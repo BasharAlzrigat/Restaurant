@@ -1,4 +1,11 @@
+const container = document.getElementById("container")
+
 const menuDiv = document.getElementById("Menu")
+container.appendChild(menuDiv)
+const logo=document.createElement("img")
+menuDiv.appendChild(logo)
+logo.src="Logo.png"
+logo.id="logo"
 const menutable = document.createElement("table")
 menuDiv.appendChild(menutable)
 const tr1 = document.createElement("tr")
@@ -15,6 +22,35 @@ th1.textContent = "ID"
 th2.textContent = "Name"
 th3.textContent = "Type"
 th4.textContent = "Price"
+buttons=document.createElement("div")
+buttons.id="buttonsDiv"
+menuDiv.appendChild(buttons)
+const resetButton = document.createElement("button")
+buttons.appendChild(resetButton)
+resetButton.textContent = "Reset"
+resetButton.id = "btn"
+const printButton = document.createElement("button")
+buttons.appendChild(printButton)
+printButton.textContent = "Print"
+printButton.id = "btn"
+const addMorebutton = document.createElement("button")
+buttons.appendChild(addMorebutton)
+addMorebutton.textContent = "Add More"
+addMorebutton.id = "btn"
+resetButton.addEventListener("click", clearTable)
+function clearTable() {localStorage.clear()
+    window.location.reload()
+}
+
+printButton.addEventListener("click", printTable)
+function printTable() {
+    window.print()
+}
+
+addMorebutton.addEventListener("click", addMore)
+function addMore() {
+    document.location.href = 'index.html';
+}
 
 Menu.prototype.id = function () {
     let theId = Math.ceil(Math.random() * 10000);
