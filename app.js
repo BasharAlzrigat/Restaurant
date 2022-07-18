@@ -27,4 +27,5 @@ function createNew(event) {
         menuLocalStorage.push(newItem)
     }
     localStorage.setItem("Menu", JSON.stringify(menuLocalStorage))
+    document.location.href = 'statistics.html';
 }
