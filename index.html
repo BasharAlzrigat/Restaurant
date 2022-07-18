@@ -1,60 +1,50 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
-table, th, td {
-    width: 800px;
-    border: 1px solid black;
-    margin: 50px;
-    text-align: center;
-}
-div {
-    display: flex;
-    justify-content: center;
-}
-form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-form select, label, input {
-    margin: 1px;
-}
-#btn {
-    margin: 20px
-}
-#foodType{
-    margin-bottom: 20px
-}
-    </style>
-    
-<body>
+  </head>
+  <style>
+    form {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    form select,
+    label,
+    input {
+      margin: 1px;
+    }
+    #btn {
+      margin: 20px;
+    }
+    #foodType {
+      margin-bottom: 20px;
+    }
+  </style>
 
-      
-    <div id="Menu"></div>
+  <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="statistics.html">Statistics</a></li>
+    </ul>
     <form id="menu-form">
-        <select name="foodType" id="foodType">
-            <option value="">Select Food Type</option>
-            <option value="Fruit and vegetables">Fruit and vegetables</option>
-            <option value="Starchy food">Starchy food</option>
-            <option value="Dairy">Dairy</option>
-            <option value="Protein">Protein</option>
-            <option value="Fat">Fat</option>
-        </select>
-        <label for="Food Name">Food Name</label>
-        <input type="text" name="foodName" id="foodName"/>
-        <label for="Price">Price</label>
-        <input type="text" name="price" id="price"/>
+      <select name="foodType" id="foodType">
+        <option value="">Select Food Type</option>
+        <option value="Fruit and vegetables">Fruit and vegetables</option>
+        <option value="Starchy food">Starchy food</option>
+        <option value="Dairy">Dairy</option>
+        <option value="Protein">Protein</option>
+        <option value="Fat">Fat</option>
+      </select>
+      <label for="Food Name">Food Name</label>
+      <input type="text" name="foodName" id="foodName" />
+      <label for="Price">Price</label>
+      <input type="text" name="price" id="price" />
 
-        <input type="submit" value="submit" id="btn">
-
+      <input type="submit" value="submit" id="btn" />
     </form>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
