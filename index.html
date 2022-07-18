@@ -6,30 +6,78 @@
     <title>Document</title>
   </head>
   <style>
-    form {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
+    #logo {
+width: inherit;
     }
-    form select,
+#menu-form {
+    margin: auto;
+    margin-top: 100px;
+    width: 40%;
+    border-spacing: 10px;
+    border-radius: 10px;
+    background-color: #e4e4e482;
+    padding: 5px;
+    border-color: #cdcdcd;
+    border-style: groove;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form select,
     label,
     input {
       margin: 1px;
     }
     #btn {
-      margin: 20px;
-    }
+    border-radius: 5px;
+    margin: 20px;
+    background-color: #ffffff;
+    color: #000000;
+}
+#btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
     #foodType {
-      margin-bottom: 20px;
-    }
+    margin: 20px;
+}
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 15px;
+}
+li {
+    border-left: 1px solid #bbb;
+}
+
+li a {
+    display: block;
+    box-shadow: #000000;
+    color: white;
+    text-align: center;
+    padding: 7px 9px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ffffff;
+    color: #000000;
+}
+p{
+  width: 100%;
+  margin: 2px;
+}
   </style>
 
   <body>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="statistics.html">Statistics</a></li>
-    </ul>
     <form id="menu-form">
+      <img id="logo" src="Logo.png" alt="">
       <select name="foodType" id="foodType">
         <option value="">Select Food Type</option>
         <option value="Fruit and vegetables">Fruit and vegetables</option>
@@ -44,6 +92,13 @@
       <input type="text" name="price" id="price" />
 
       <input type="submit" value="submit" id="btn" />
+      <p><b>submit</b>: will add a new item to the table</p>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="statistics.html">Statistics</a></li>
+      </ul>
+  
     </form>
     <script src="app.js"></script>
   </body>

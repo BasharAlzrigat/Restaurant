@@ -7,25 +7,108 @@
     <title>Document</title>
   </head>
   <style>
-    table,
-    th,
-    td {
-      width: 800px;
-      border: 1px solid black;
-      margin: 50px;
-      text-align: center;
+        #logo {
+width: 267.23px;
     }
-    div {
+#container {
+    margin: auto;
+    margin-top: 100px;
+    width: 40%;
+    border-spacing: 10px;
+    border-radius: 10px;
+    background-color: #e4e4e482;
+    padding: 5px;
+    border-color: #cdcdcd;
+    border-style: groove;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+    #Menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+    table {
+      width: inherit;
+    }
+    table, th, td {
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+}
+    #buttonsDiv {
       display: flex;
       justify-content: center;
     }
+    #btn {
+    border-radius: 5px;
+    margin: 20px;
+    background-color: #ffffff;
+    color: #000000;
+}
+#btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+#instruction {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 15px;
+}
+li {
+    border-left: 1px solid #bbb;
+}
+
+li a {
+    display: block;
+    box-shadow: #000000;
+    color: white;
+    text-align: center;
+    padding: 7px 9px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ffffff;
+    color: #000000;
+}
+p{
+  margin: 2px;
+}
   </style>
   <body>
+    <div id="container">
+
+    <div id="Menu"></div>
+    <div id="instruction">
+      <p><b>Rest</b>: will clear the table</p>
+      <p><b>Add</b>: will add a new row to the table</p>
+      <p><b>Delete</b>: will delete the last row in the table</p>
+      <p><b>print</b>: will print the table</p>
+  
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="statistics.html">Statistics</a></li>
     </ul>
-    <div id="Menu"></div>
+
+  </div>
+
+</div>
+
     <script src="app.js"></script>
     <script src="statistics.js"></script>
   </body>
