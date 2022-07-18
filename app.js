@@ -25,9 +25,7 @@ th2.textContent = "Name"
 th3.textContent = "Type"
 th4.textContent = "Price"
 
-new Menu("Pizza", "Fat", "8.35")
-new Menu("Burger", "Fat", "4.25")
-new Menu("Apple", "Fruit", "0.63")
+
 
 const menuForm = document.getElementById("menu-form");
 menuForm.addEventListener("submit", createNew);
@@ -77,6 +75,10 @@ function renderAllMenu() {
 
         }
 
+    } else {
+        new Menu("Pizza", "Fat", "8.35")
+        new Menu("Burger", "Fat", "4.25")
+        new Menu("Apple", "Fruit", "0.63")
     }
 
 
