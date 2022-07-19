@@ -7,6 +7,7 @@ const logo = document.createElement("img")
 menuDiv.appendChild(logo)
 logo.src = "Logo.png"
 logo.id = "logo"
+
 const menutable = document.createElement("table")
 menuDiv.appendChild(menutable)
 const tr1 = document.createElement("tr")
@@ -23,6 +24,9 @@ th1.textContent = "ID"
 th2.textContent = "Name"
 th3.textContent = "Type"
 th4.textContent = "Price"
+const statistics = document.getElementById("statistics")
+menuDiv.appendChild(statistics)
+
 const buttons = document.createElement("div")
 buttons.id = "buttonsDiv"
 menuDiv.appendChild(buttons)
