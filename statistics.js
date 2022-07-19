@@ -1,11 +1,12 @@
+'use strict'
 const container = document.getElementById("container")
 
 const menuDiv = document.getElementById("Menu")
 container.appendChild(menuDiv)
-const logo=document.createElement("img")
+const logo = document.createElement("img")
 menuDiv.appendChild(logo)
-logo.src="Logo.png"
-logo.id="logo"
+logo.src = "Logo.png"
+logo.id = "logo"
 const menutable = document.createElement("table")
 menuDiv.appendChild(menutable)
 const tr1 = document.createElement("tr")
@@ -22,8 +23,8 @@ th1.textContent = "ID"
 th2.textContent = "Name"
 th3.textContent = "Type"
 th4.textContent = "Price"
-buttons=document.createElement("div")
-buttons.id="buttonsDiv"
+const buttons = document.createElement("div")
+buttons.id = "buttonsDiv"
 menuDiv.appendChild(buttons)
 const resetButton = document.createElement("button")
 buttons.appendChild(resetButton)
@@ -38,7 +39,8 @@ buttons.appendChild(addMorebutton)
 addMorebutton.textContent = "Add More"
 addMorebutton.id = "btn"
 resetButton.addEventListener("click", clearTable)
-function clearTable() {localStorage.clear()
+function clearTable() {
+    localStorage.clear()
     window.location.reload()
 }
 
@@ -51,6 +53,8 @@ addMorebutton.addEventListener("click", addMore)
 function addMore() {
     document.location.href = 'index.html';
 }
+
+//   Chartjs code ends here
 
 Menu.prototype.id = function () {
     let theId = Math.ceil(Math.random() * 10000);
@@ -94,3 +98,60 @@ function renderAllMenu() {
 }
 
 renderAllMenu()
+
+//   Chartjs code start here
+
+const data = {
+    labels: [],
+    datasets: [{
+        label: 'My First Dataset',
+        data: [],
+        backgroundColor: [
+            'rgb(248,3,3)',
+            'rgb(25,30,236)',
+            'rgb(40,255,1)',
+            'rgb(50,50,50)',
+            'rgb(2,226,208)',
+        ],
+        hoverOffset: 4
+    }]
+};
+
+let typeArr = []
+let priceArr = []
+
+for (let i = 0; i < allMenu.length; i++) {
+    typeArr.push(allMenu[i].type)
+    priceArr.push(allMenu[i].price)
+}
+typeArr = [...new Set(typeArr)]
+priceArr.length = typeArr.length
+for (let i = 0; i < typeArr.length; i++) {
+    data.labels.push(typeArr[i])
+}
+
+    for (let j = 0; j < typeArr.length; j++) {
+        for (let i = 0; i < allMenu.length; i++) {
+        if (allMenu[i].type === typeArr[j]) {
+            priceArr[j]=(Number(priceArr[j])+Number(allMenu[i].price))
+            
+        }
+    }
+}
+
+for (let i = 0; i < priceArr.length; i++) {
+    data.datasets[0].data.push(priceArr[i])
+}
+console.log(allMenu);
+console.log(data.labels);
+console.log(data.datasets[0].data);
+
+const config = {
+    type: 'pie',
+    data: data,
+    options: {}
+};
+const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+);
