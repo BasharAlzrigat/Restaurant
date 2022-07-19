@@ -103,7 +103,7 @@ function renderAllMenu() {
 
 renderAllMenu()
 
-//   Chartjs code start here
+////////////////////////   Chartjs code start here    ////////////////////////
 
 const data = {
     labels: [],
