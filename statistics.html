@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
-    <title>Document</title>
-  </head>
-  <style>
-    body{
-      display: flex;
+  <title>Document</title>
+</head>
+<style>
+  body {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    }
-        #logo {
-width: 267.23px;
-    }
-    #container {
+  }
+
+  #logo {
+    width: 267.23px;
+  }
+
+  #container {
     margin: auto;
     margin-top: 20px;
     width: 40%;
@@ -31,42 +34,52 @@ width: 267.23px;
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
-}
-    #Menu {
+  }
+
+  #Menu {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
-    table {
-      width: inherit;
-    }
-    table, th, td {
+  }
+
+  table {
+    width: inherit;
+  }
+
+  table,
+  th,
+  td {
     border: 1px solid black;
     margin: 10px;
     text-align: center;
-}
-    #buttonsDiv {
-      display: flex;
-      justify-content: center;
-    }
-    #btn {
+  }
+
+  #buttonsDiv {
+    display: flex;
+    justify-content: center;
+  }
+
+  #btn {
     border-radius: 5px;
     margin: 20px;
     background-color: #ffffff;
     color: #000000;
-}
-#btn:hover {
+  }
+
+  #btn:hover {
     background-color: #000000;
     color: #ffffff;
-}
-#instruction {
+  }
+
+  #instruction {
     display: flex;
     width: 100%;
     flex-direction: column;
-}
-ul {
+  }
+
+  ul {
     display: flex;
     list-style-type: none;
     margin: auto;
@@ -76,93 +89,99 @@ ul {
     overflow: hidden;
     background-color: #000000;
     border-radius: 15px;
-}
-.active {
+  }
+
+  .active {
     background-color: #0C92BF;
-}
+  }
 
-li {
+  li {
     border-left: 1px solid #bbb;
-}
+  }
 
-li a {
+  li a {
     display: block;
     box-shadow: #000000;
     color: white;
     text-align: center;
     padding: 7px 9px;
     text-decoration: none;
-}
+  }
 
-li a:hover:not(.active) {
+  li a:hover:not(.active) {
     background-color: #ffffff;
     color: #000000;
-}
-.active {
+  }
+
+  .active {
     background-color: #f9f7f1c2;
     color: black;
-}
+  }
 
-p{
-  margin: 2px;
-}
-.bottom-footer {
+  p {
+    margin: 2px;
+  }
+
+  .bottom-footer {
     font-size: small;
     display: flex;
     justify-content: center;
     margin-top: 5px;
-}
+  }
 
-.bottom-footer i {
+  .bottom-footer i {
     color: #000000;
-}
+  }
 
-.bottom-footer a {
+  .bottom-footer a {
     margin: 0 5px 0 5px;
     color: #000000;
-}
+  }
 
-.heart {
+  .heart {
     color: rgb(255, 0, 0);
 
-}
+  }
 
-.bottom-footer a:visited {
+  .bottom-footer a:visited {
     color: #00000000;
-}
+  }
 
-.footer-link a:hover {
+  .footer-link a:hover {
     color: #0C92BF;
-}
+  }
+</style>
 
+<body>
+  <div id="container">
 
-  </style>
-  <body>
-    <div id="container">
 
     <div id="Menu"></div>
+    
     <div id="instruction">
       <p><b>Rest</b>: will clear the table</p>
       <p><b>Add</b>: will add a new row to the table</p>
       <p><b>Delete</b>: will delete the last row in the table</p>
       <p><b>print</b>: will print the table</p>
-  
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a class="active" href="statistics.html">Statistics</a></li>
-    </ul>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="statistics.html">Statistics</a></li>
+      </ul>
+
+    </div>
 
   </div>
+  <div class="bottom-footer">
+    <span class=footer-link><a href="https://fontawesome.com/">Fontawesome 6.1.1 </a></span>
+    <a><i class="fa-solid fa-ellipsis-vertical"></i></i></a>
+    <span class=footer-link><a href="https://github.com/BasharAlzrigat">Follow Me on Github</a></span>
+    <a><i class="fa-solid fa-ellipsis-vertical"></i></a>
+    <a>made with love<span class="heart"> ♥</span></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+  <script src="statistics.js"></script>
+</body>
 
-</div>
-<div class="bottom-footer">
-  <span class=footer-link><a href="https://fontawesome.com/">Fontawesome 6.1.1 </a></span>
-  <a><i class="fa-solid fa-ellipsis-vertical"></i></i></a>
-  <span class=footer-link><a href="https://github.com/BasharAlzrigat">Follow Me on Github</a></span>
-  <a><i class="fa-solid fa-ellipsis-vertical"></i></a>
-  <a>made with love<span class="heart"> ♥</span></a>
-</div>
-    <script src="app.js"></script>
-    <script src="statistics.js"></script>
-  </body>
 </html>
